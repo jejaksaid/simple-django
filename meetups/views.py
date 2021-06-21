@@ -3,8 +3,14 @@ from django.shortcuts import render
 
 def index(request):
     meetups = [
-        { 'title': 'A First Meetup'},
-        { 'title': 'second'}
+        { 
+            'title': 'A First Meetup', 
+            'location': 'New York', 
+            'slug': 'a-first-meetup' },
+        { 
+            'title': 'second', 
+            'location': 'Paris', 
+            'slug': 'a-second-meetup' }
     ]
     return render(request, 'meetups/index.html', {
         'show_meetups' : True,
